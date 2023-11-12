@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/GridMain"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="48dp"
+  android:columnCount="3"
+  android:rowCount="3"
+  android:visibility="visible"
+  android:orientation="horizontal">
+
+
+  <Button
+    android:id="@+id/button1"
+
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:onClick="onSoundButtonClick"
+    android:tag="@string/bot_n_sonido_1"
+    android:text="@string/bot_n_sonido_1"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/button_rounded"
+    />
+
+
+
+  <Button
+    android:id="@+id/button2"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:onClick="onSoundButtonClick"
+    android:tag="@string/bot_n_sonido_2"
+    android:text="@string/bot_n_sonido_2"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/button_rounded"
+    />
+  <Button
+    android:id="@+id/button3"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:onClick="onSoundButtonClick"
+    android:tag="@string/bot_n_sonido_3"
+    android:text="@string/bot_n_sonido_3"
+    android:background="@drawable/button_rounded"
+    android:padding="8dp"
+    android:layout_margin="4dp"/>
+
+  <Button
+    android:id="@+id/button4"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:onClick="onSoundButtonClick"
+    android:tag="@string/bot_n_sonido_4"
+    android:text="@string/bot_n_sonido_4"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/button_rounded"
+    />
+
+  <Button
+    android:id="@+id/button5"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:onClick="onSoundButtonClick"
+    android:tag="@string/bot_n_sonido_5"
+    android:text="@string/bot_n_sonido_5"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/button_rounded"
+    />
+
+  <Button
+    android:id="@+id/button6"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:onClick="onSoundButtonClick"
+    android:tag="@string/bot_n_sonido_6"
+    android:text="@string/bot_n_sonido_6"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/button_rounded"
+    />
+
+  <Button
+    android:id="@+id/button7"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:onClick="onSoundButtonClick"
+    android:tag="@string/bot_n_sonido_7"
+    android:text="@string/bot_n_sonido_7"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/button_rounded"
+    />
+
+  <Button
+    android:id="@+id/button8"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:onClick="onSoundButtonClick"
+    android:tag="@string/bot_n_sonido_8"
+    android:text="@string/bot_n_sonido_8"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/button_rounded"
+
+    />
+
+  <Button
+    android:id="@+id/button9"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:onClick="onSoundButtonClick"
+    android:tag="@string/bot_n_sonido_9"
+    android:text="@string/bot_n_sonido_9"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/button_rounded"
+    />
+
+</GridLayout>

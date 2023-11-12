@@ -1,0 +1,12 @@
+<resources>
+  <string name="app_name">LiveBeatPad</string>
+  <string name="bot_n_sonido_9">sonido 9</string>
+  <string name="bot_n_sonido_8">sonido 8</string>
+  <string name="bot_n_sonido_7">sonido 7</string>
+  <string name="bot_n_sonido_6">sonido 6</string>
+  <string name="bot_n_sonido_5">sonido 5</string>
+  <string name="bot_n_sonido_4">sonido 4</string>
+  <string name="bot_n_sonido_3">sonido 3</string>
+  <string name="bot_n_sonido_2">sonido 2</string>
+  <string name="bot_n_sonido_1">sonido 1</string>
+</resources>
