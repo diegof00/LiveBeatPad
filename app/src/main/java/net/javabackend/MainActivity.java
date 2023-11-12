@@ -1,12 +1,23 @@
 package net.javabackend;
 
 import android.annotation.SuppressLint;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import android.media.MediaPlayer.OnErrorListener;
+import android.media.MediaPlayer.OnPreparedListener;
+import android.provider.MediaStore.Audio.Media;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+  private static final List<MediaPlayer> mediaPlayers = new ArrayList<>();
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +26,12 @@ public class MainActivity extends AppCompatActivity {
   }
 
   @SuppressLint("NonConstantResourceId")
-  public void onSoundButtonClick(View view) {
+  public void onSoundButtonClick(View view) throws IOException {
+
+    //detect if a sound is playing
+    mediaPlayers.stream().filter(MediaPlayer::isPlaying).forEach(MediaPlayer::stop);
+    mediaPlayers.clear();
+
 
     MediaPlayer mediaPlayer = null;
     switch (view.getId()) {
@@ -30,11 +46,31 @@ public class MainActivity extends AppCompatActivity {
         break;
       // Agrega más casos según la cantidad de botones que tengas
     }
+
+
     if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
-      mediaPlayer.start();
-      mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+      mediaPlayers.add(mediaPlayer);
+      mediaPlayer.setOnPreparedListener(this.prepare());
+      mediaPlayer.setOnCompletionListener(this.completionListener());
+      mediaPlayer.setOnErrorListener(this.listener());
     }
 
+
     //detect button  pressed
+  }
+
+  private OnPreparedListener prepare() {
+    return MediaPlayer::start;
+  }
+
+  private OnCompletionListener completionListener() {
+    return MediaPlayer::release;
+  }
+
+  private OnErrorListener listener() {
+    return (mp, what, extra) -> {
+      mp.reset();
+      return false;
+    };
   }
 }
